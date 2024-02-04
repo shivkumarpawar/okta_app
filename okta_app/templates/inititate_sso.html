@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Add your CSS styles or link to an external stylesheet here -->
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h2>Login</h2>
+        <form action="{% url 'validate_email' %}" method="post">
+            {% csrf_token %}
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
